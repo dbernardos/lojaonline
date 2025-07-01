@@ -1,6 +1,6 @@
 <?php 
     include 'conexao.php';
-    $id = $_POST['id'];
+    $id = $_POST['btnEditar'];
     $resultado = $pdo->prepare("SELECT * FROM produto WHERE id = ?");
     $resultado->execute([$id]);
     $linha = $resultado->fetch(PDO::FETCH_ASSOC);

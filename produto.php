@@ -31,7 +31,11 @@ require("conexao.php");
             <td><?php echo $linha['id'] ?></td>
             <td><?php echo $linha['nome'] ?></td>
             <td><?php echo "R$ " . $linha ['preco'] ?></td>
-            <td>Editar</td>
+            <td>
+                <form action="editar.php" method="POST">
+                    <button type="submit" name="btnEditar" value="<?php echo $linha['id'] ?>">Editar</button>
+                </form>
+            </td>
             <td>
                 <form action="excluir.php" method="POST">
                     <button type="submit" name="btnApagar" value="<?php echo $linha['id'] ?>">Apagar</button>
