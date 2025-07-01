@@ -17,13 +17,13 @@
 <h1>Editar produto</h1>
 
 <form action="atualizar.php" method="post">
-    <input type="hidden" name="id" value="">
+    <input type="hidden" name="id" value="<?php echo $linha['id'] ?>">
 
     <p>Nome:</p>
-    <input type="text" name="nome" value="">
+    <input type="text" name="nome" value="<?php echo $linha['nome'] ?>">
     
     <p>Preço:</p>
-    <input type="text" name="preco" value="">
+    <input type="text" name="preco" value="<?php echo $linha['preco'] ?>">
 
     <input type="submit" value="Atualizar">
 </form>
